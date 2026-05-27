@@ -1,6 +1,126 @@
 {
-  "updated": "2026-01-01T00:00:00+00:00",
+  "updated": "2026-05-27T16:09:05.240472+00:00",
   "premarket": [],
-  "top_gainers": [],
-  "_note": "This file will be overwritten by the hourly GitHub Actions harvester."
+  "top_gainers": [
+    {
+      "symbol": "ASTC",
+      "price": 17.51,
+      "change_pct": 608.94,
+      "volume": 93501794
+    },
+    {
+      "symbol": "AIM",
+      "price": 0.48,
+      "change_pct": 106.53,
+      "volume": 291129593
+    },
+    {
+      "symbol": "BRTX",
+      "price": 0.5,
+      "change_pct": 99.24,
+      "volume": 446629974
+    },
+    {
+      "symbol": "AMSS",
+      "price": 6.13,
+      "change_pct": 71.23,
+      "volume": 15668541
+    },
+    {
+      "symbol": "SNGX",
+      "price": 0.87,
+      "change_pct": 68.64,
+      "volume": 165509960
+    },
+    {
+      "symbol": "QTTB",
+      "price": 11.52,
+      "change_pct": 62.5,
+      "volume": 17423611
+    },
+    {
+      "symbol": "APPS",
+      "price": 7.6,
+      "change_pct": 58.01,
+      "volume": 37545466
+    },
+    {
+      "symbol": "FGL",
+      "price": 2.62,
+      "change_pct": 39.36,
+      "volume": 30612326
+    },
+    {
+      "symbol": "TOPP",
+      "price": 1.43,
+      "change_pct": 34.44,
+      "volume": 228358
+    },
+    {
+      "symbol": "NCPL",
+      "price": 1.39,
+      "change_pct": 29.91,
+      "volume": 22928533
+    },
+    {
+      "symbol": "VCIG",
+      "price": 3.74,
+      "change_pct": 28.97,
+      "volume": 16809266
+    },
+    {
+      "symbol": "QFIN",
+      "price": 16.18,
+      "change_pct": 28.54,
+      "volume": 4431250
+    },
+    {
+      "symbol": "HSPT",
+      "price": 11.63,
+      "change_pct": 28.08,
+      "volume": 12287
+    },
+    {
+      "symbol": "DY",
+      "price": 535.82,
+      "change_pct": 27.43,
+      "volume": 698780
+    },
+    {
+      "symbol": "NNVC",
+      "price": 1.83,
+      "change_pct": 20.89,
+      "volume": 25579034
+    },
+    {
+      "symbol": "LNAI",
+      "price": 2.55,
+      "change_pct": 20.85,
+      "volume": 271446
+    },
+    {
+      "symbol": "AEMD",
+      "price": 2.94,
+      "change_pct": 20.0,
+      "volume": 13821469
+    },
+    {
+      "symbol": "EDIT",
+      "price": 3.69,
+      "change_pct": 19.97,
+      "volume": 11332334
+    },
+    {
+      "symbol": "IPWR",
+      "price": 8.3,
+      "change_pct": 19.94,
+      "volume": 6527708
+    },
+    {
+      "symbol": "VTIX",
+      "price": 3.59,
+      "change_pct": 19.67,
+      "volume": 4162095
+    }
+  ]
 }

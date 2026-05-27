@@ -1,7 +1,9 @@
 {
-  "updated": "2026-01-01T00:00:00+00:00",
+  "updated": "2026-05-27T16:09:05.240472+00:00",
   "count": 0,
-  "filters": {"max_price": 10, "min_volume": 100000},
-  "results": [],
-  "_note": "This file will be overwritten by the hourly GitHub Actions harvester."
+  "filters": {
+    "max_price": 10.0,
+    "min_volume": 100000
+  },
+  "results": []
 }

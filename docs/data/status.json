@@ -1,8 +1,8 @@
 {
-  "updated": "2026-01-01T00:00:00+00:00",
-  "universe_size": 0,
+  "updated": "2026-05-27T16:09:05.240472+00:00",
+  "universe_size": 65,
   "scan_matches": 0,
   "premarket_movers": 0,
   "news_items": 0,
-  "next_run": "Waiting for first GitHub Actions harvest run."
+  "next_run": "every hour during market days (cron in workflow)"
 }
