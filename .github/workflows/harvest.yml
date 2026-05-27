@@ -1,16 +1,23 @@
-name: Hourly Stock Data Harvest
+name: Stock Data Harvest
 
 on:
   schedule:
-    - cron: '0 * * * 1-5'
-    - cron: '0 14 * * 0,6'
+    # Every 30 min during US extended market hours (~4am-8pm ET), Mon-Fri
+    # GitHub cron uses UTC. 9-23 UTC covers ~4am-7pm ET (winter) / 5am-7pm ET (summer)
+    # Stays well under 2,000 Actions min/month free tier (~1,320 min/month usage)
+    - cron: '*/30 9-23 * * 1-5'
+
+  # Manual trigger button in the Actions tab
   workflow_dispatch:
+
+  # Run on every push to main for quick iteration
   push:
     branches: [main]
     paths:
       - 'harvester/**'
       - '.github/workflows/harvest.yml'
 
+# Required so the action can commit data back to the repo
 permissions:
   contents: write
 
@@ -22,6 +29,7 @@ jobs:
   harvest:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,6 +50,7 @@ jobs:
 
       - name: Run harvester
         env:
+          # Optional: set in repo Settings → Secrets → Actions for better news
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python harvester/harvest.py
 
@@ -62,6 +71,6 @@ jobs:
             echo "No data changes — skipping commit."
           else
             TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-            git commit -m "📊 Hourly harvest: $TIMESTAMP"
+            git commit -m "📊 Harvest: $TIMESTAMP"
             git push
           fi
