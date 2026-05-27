@@ -1,126 +1,126 @@
 {
-  "updated": "2026-05-27T16:09:05.240472+00:00",
+  "updated": "2026-05-27T16:16:55.638206+00:00",
   "premarket": [],
   "top_gainers": [
     {
       "symbol": "ASTC",
-      "price": 17.51,
-      "change_pct": 608.94,
-      "volume": 93501794
+      "price": 15.86,
+      "change_pct": 541.95,
+      "volume": 99819303
     },
     {
       "symbol": "AIM",
-      "price": 0.48,
-      "change_pct": 106.53,
-      "volume": 291129593
+      "price": 0.54,
+      "change_pct": 130.21,
+      "volume": 318279066
     },
     {
       "symbol": "BRTX",
-      "price": 0.5,
-      "change_pct": 99.24,
-      "volume": 446629974
+      "price": 0.49,
+      "change_pct": 95.72,
+      "volume": 450387038
     },
     {
       "symbol": "AMSS",
-      "price": 6.13,
-      "change_pct": 71.23,
-      "volume": 15668541
-    },
-    {
-      "symbol": "SNGX",
-      "price": 0.87,
-      "change_pct": 68.64,
-      "volume": 165509960
+      "price": 6.23,
+      "change_pct": 74.02,
+      "volume": 15729967
     },
     {
       "symbol": "QTTB",
-      "price": 11.52,
-      "change_pct": 62.5,
-      "volume": 17423611
+      "price": 11.65,
+      "change_pct": 64.32,
+      "volume": 17554446
+    },
+    {
+      "symbol": "SNGX",
+      "price": 0.82,
+      "change_pct": 59.67,
+      "volume": 171592878
     },
     {
       "symbol": "APPS",
-      "price": 7.6,
-      "change_pct": 58.01,
-      "volume": 37545466
+      "price": 7.46,
+      "change_pct": 55.09,
+      "volume": 38314043
     },
     {
       "symbol": "FGL",
-      "price": 2.62,
-      "change_pct": 39.36,
-      "volume": 30612326
+      "price": 2.67,
+      "change_pct": 42.0,
+      "volume": 31019068
     },
     {
       "symbol": "TOPP",
-      "price": 1.43,
-      "change_pct": 34.44,
-      "volume": 228358
+      "price": 1.41,
+      "change_pct": 33.18,
+      "volume": 278689
     },
     {
       "symbol": "NCPL",
       "price": 1.39,
-      "change_pct": 29.91,
-      "volume": 22928533
+      "change_pct": 30.13,
+      "volume": 23124567
     },
     {
       "symbol": "VCIG",
-      "price": 3.74,
-      "change_pct": 28.97,
-      "volume": 16809266
+      "price": 3.77,
+      "change_pct": 30.0,
+      "volume": 16952258
     },
     {
       "symbol": "QFIN",
-      "price": 16.18,
-      "change_pct": 28.54,
-      "volume": 4431250
-    },
-    {
-      "symbol": "HSPT",
-      "price": 11.63,
-      "change_pct": 28.08,
-      "volume": 12287
+      "price": 16.33,
+      "change_pct": 29.67,
+      "volume": 4578086
     },
     {
       "symbol": "DY",
-      "price": 535.82,
-      "change_pct": 27.43,
-      "volume": 698780
-    },
-    {
-      "symbol": "NNVC",
-      "price": 1.83,
-      "change_pct": 20.89,
-      "volume": 25579034
+      "price": 533.38,
+      "change_pct": 26.85,
+      "volume": 708994
     },
     {
       "symbol": "LNAI",
-      "price": 2.55,
-      "change_pct": 20.85,
-      "volume": 271446
+      "price": 2.67,
+      "change_pct": 26.65,
+      "volume": 336642
     },
     {
-      "symbol": "AEMD",
-      "price": 2.94,
-      "change_pct": 20.0,
-      "volume": 13821469
+      "symbol": "HSPT",
+      "price": 11.39,
+      "change_pct": 25.43,
+      "volume": 14558
+    },
+    {
+      "symbol": "AMST",
+      "price": 1.9,
+      "change_pct": 20.25,
+      "volume": 438941
+    },
+    {
+      "symbol": "LFVN",
+      "price": 8.32,
+      "change_pct": 20.06,
+      "volume": 801155
+    },
+    {
+      "symbol": "MNTS",
+      "price": 18.55,
+      "change_pct": 19.83,
+      "volume": 35810531
     },
     {
       "symbol": "EDIT",
-      "price": 3.69,
-      "change_pct": 19.97,
-      "volume": 11332334
+      "price": 3.66,
+      "change_pct": 18.99,
+      "volume": 11393467
     },
     {
-      "symbol": "IPWR",
-      "price": 8.3,
-      "change_pct": 19.94,
-      "volume": 6527708
-    },
-    {
-      "symbol": "VTIX",
-      "price": 3.59,
-      "change_pct": 19.67,
-      "volume": 4162095
+      "symbol": "LITB",
+      "price": 3.1,
+      "change_pct": 18.32,
+      "volume": 22000
     }
   ]
 }
