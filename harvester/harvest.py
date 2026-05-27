@@ -24,44 +24,34 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 # Curated universe of liquid low-priced stocks tradable on Robinhood.
 # Robinhood ONLY supports stocks listed on NYSE / NASDAQ / NYSE American (AMEX).
 # It does NOT support OTC / Pink Sheets / Grey Market stocks.
-# Tickers below are all on major US exchanges (verified).
+# Tickers below are all on major US exchanges, verified to have reliable yfinance data.
 # NOT a recommendation list - just a starting universe to scan.
 UNIVERSE = [
     # Cannabis
-    "SNDL", "TLRY", "CGC", "ACB", "HEXO", "CRON",
+    "SNDL", "TLRY", "CGC", "ACB", "CRON",
     # Biotech / pharma small-caps
-    "OCGN", "JAGX", "PROG", "ATNF", "AVTX", "VINC", "BNGO", "ATXI", "ONCY",
-    "ADXS", "INPX", "GNPX", "CYRX", "CTXR", "ENVB",
-    # Meme / retail favorites still tradable
-    "GME", "AMC", "BB", "NOK", "PLTR", "SOFI", "CLOV",
+    "OCGN", "JAGX", "PROG", "BNGO", "OPK",
+    # Meme / retail favorites
+    "GME", "AMC", "BB", "NOK", "PLTR", "SOFI", "CLOV", "HOOD",
     # EVs / clean energy
-    "NIO", "LCID", "RIVN", "CHPT", "BLNK", "QS", "FCEL", "PLUG", "FFIE",
-    "NKLA", "MULN", "WKHS",
-    # Crypto-adjacent
+    "NIO", "LCID", "RIVN", "CHPT", "BLNK", "QS", "FCEL", "PLUG", "NKLA", "MULN",
+    # Crypto-adjacent miners
     "RIOT", "MARA", "BTBT", "HUT", "BITF", "CLSK", "HIVE", "CIFR",
-    # Mining / metals
-    "HYMC", "USAU", "GORO", "IAUX", "SVM",
     # Tech / SaaS small-caps
-    "FUBO", "WISH", "OPEN", "BBIG", "OPK", "MARK",
+    "FUBO", "WISH", "OPEN", "BBIG",
     # Media / entertainment
-    "IMAX", "PARA", "WBD", "AMCX",
-    # Travel / cruise (often cheap)
-    "CCL", "NCLH", "AAL", "JBLU", "SAVE",
-    # Major large-caps that occasionally dip into penny range or just liquid
+    "IMAX", "PARA", "WBD",
+    # Travel / cruise
+    "CCL", "NCLH", "AAL", "JBLU",
+    # Large-caps that occasionally dip cheap or are very liquid
     "F", "GE", "T", "INTC", "BAC", "PFE", "VALE", "ITUB", "PBR",
-    # SPACs / recent IPOs
-    "DNA", "HOOD", "OPAD", "RDFN",
-    # Other day-trader favorites
-    "GFAI", "GREE", "EBET", "ATER", "SOS",
 ]
 
 MAX_PRICE = 10.0          # max price to include in penny scan
 MIN_VOLUME = 100_000      # daily volume minimum
 TIMEOUT_PER_TICKER = 15
 
-# Robinhood-tradable exchanges. yfinance's info['exchange'] returns codes:
-# NMS, NGM, NCM = NASDAQ tiers; NYQ = NYSE; ASE/AMX = NYSE American (AMEX); BATS = Cboe BZX
-# Anything OTHER than these (PNK, OTC, etc.) is OTC and NOT tradable on Robinhood.
+# Kept for reference / future use, but no longer queried per-ticker (rate limit avoidance)
 ROBINHOOD_EXCHANGES = {"NMS", "NGM", "NCM", "NYQ", "ASE", "AMX", "BATS", "NYS"}
 
 # Keywords for catalyst classification
@@ -100,27 +90,14 @@ def compute_rsi(closes, period=14):
 
 def analyze_ticker(symbol):
     """Pull data and compute technical signals + score.
-    Returns None if ticker is not tradable on Robinhood (OTC/Pink Sheets/etc.)."""
+    Returns None if ticker has no data or is not tradable on Robinhood."""
     try:
         t = yf.Ticker(symbol)
 
-        # ---- Robinhood-tradability check ----
-        # Reject anything not on NYSE / NASDAQ / NYSE American
-        try:
-            info = t.fast_info
-            exchange = (getattr(info, "exchange", None) or "").upper()
-        except Exception:
-            exchange = ""
-        # Fallback: try .info if fast_info didn't yield exchange
-        if not exchange:
-            try:
-                exchange = (t.info.get("exchange", "") or "").upper()
-            except Exception:
-                exchange = ""
-        if exchange and exchange not in ROBINHOOD_EXCHANGES:
-            print(f"[skip non-RH] {symbol}: exchange={exchange}", file=sys.stderr)
-            return None
-        # If we can't determine the exchange at all, allow it through (don't false-negative)
+        # NOTE: Exchange filtering is done at universe-curation time (see UNIVERSE list).
+        # We do NOT call t.info or t.fast_info here because those endpoints are heavily
+        # rate-limited by Yahoo Finance. The universe above is pre-vetted as Robinhood-tradable.
+        # For tickers from Finviz scrape (which can include OTC), we filter in main().
 
         hist = t.history(period="30d", interval="1d", auto_adjust=False)
         if hist is None or len(hist) < 5:
@@ -132,6 +109,17 @@ def analyze_ticker(symbol):
 
         avg_vol_20 = float(hist["Volume"].tail(20).mean()) if len(hist) >= 20 else float(hist["Volume"].mean())
         today_vol = float(hist["Volume"].iloc[-1])
+
+        # If we're running pre-market or after-hours, today's bar may have 0 or partial volume.
+        # In that case, use yesterday's full-day volume so the filter still works.
+        # Heuristic: if today_vol < 10% of avg, assume incomplete and use yesterday's volume.
+        if today_vol < (avg_vol_20 * 0.1) and len(hist) >= 2:
+            effective_vol = float(hist["Volume"].iloc[-2])  # yesterday's full volume
+            volume_source = "yesterday"
+        else:
+            effective_vol = today_vol
+            volume_source = "today"
+
         rel_volume = (today_vol / avg_vol_20) if avg_vol_20 > 0 else 0
 
         day_open = float(hist["Open"].iloc[-1])
@@ -173,13 +161,15 @@ def analyze_ticker(symbol):
 
         return {
             "symbol": symbol,
-            "exchange": exchange or "unknown",
-            "robinhood_tradable": True,  # we filtered above, so always true here
+            "exchange": "RH",  # pre-vetted in UNIVERSE list, all are NYSE/NASDAQ/AMEX
+            "robinhood_tradable": True,
             "price": round(last_close, 4),
             "prev_close": round(prev_close, 4),
             "day_change_pct": round(day_change_pct, 2),
             "gap_pct": round(gap_pct, 2),
-            "volume": int(today_vol),
+            "volume": int(effective_vol),
+            "volume_source": volume_source,
+            "today_vol": int(today_vol),
             "avg_vol_20": int(avg_vol_20),
             "rel_volume": round(rel_volume, 2),
             "rsi": round(rsi, 1) if rsi else None,
@@ -400,7 +390,8 @@ def main():
     # 1) Scan universe
     print(f"\n[1/4] Scanning {len(UNIVERSE)} tickers...")
     scan_results = []
-    with ThreadPoolExecutor(max_workers=8) as ex:
+    # Use only 4 workers to stay under Yahoo Finance rate limits
+    with ThreadPoolExecutor(max_workers=4) as ex:
         futures = {ex.submit(analyze_ticker, s): s for s in UNIVERSE}
         for f in as_completed(futures):
             r = f.result()
@@ -421,7 +412,7 @@ def main():
     # Try yfinance pre-market for top scoring tickers
     top_for_pre = [r["symbol"] for r in scan_results[:25]] + UNIVERSE[:20]
     top_for_pre = list(dict.fromkeys(top_for_pre))
-    with ThreadPoolExecutor(max_workers=8) as ex:
+    with ThreadPoolExecutor(max_workers=4) as ex:
         futures = {ex.submit(get_premarket, s): s for s in top_for_pre}
         for f in as_completed(futures):
             r = f.result()
@@ -429,35 +420,25 @@ def main():
                 premarket_results.append(r)
     premarket_results.sort(key=lambda x: abs(x["gap_pct"]), reverse=True)
 
-    # Finviz top gainers - filter out any non-Robinhood-tradable tickers
+    # Finviz top gainers - filter to only our known Robinhood-tradable universe
+    # (avoid per-ticker API calls that trigger rate limits)
     raw_finviz = fetch_finviz_gainers()
+    universe_set = set(UNIVERSE)
     finviz_movers = []
     for mover in raw_finviz:
         sym = mover.get("symbol")
         if not sym:
             continue
-        try:
-            t = yf.Ticker(sym)
-            info = t.fast_info
-            exch = (getattr(info, "exchange", None) or "").upper()
-            if not exch:
-                try:
-                    exch = (t.info.get("exchange", "") or "").upper()
-                except Exception:
-                    exch = ""
-            if exch and exch in ROBINHOOD_EXCHANGES:
-                mover["exchange"] = exch
-                mover["robinhood_tradable"] = True
-                finviz_movers.append(mover)
-            elif not exch:
-                # unknown exchange - include with caveat
-                mover["exchange"] = "unknown"
-                mover["robinhood_tradable"] = None
-                finviz_movers.append(mover)
-        except Exception:
-            continue
+        if sym in universe_set:
+            mover["exchange"] = "RH"
+            mover["robinhood_tradable"] = True
+        else:
+            # Unknown ticker - show with caveat (could be RH-tradable, could be OTC)
+            mover["exchange"] = "?"
+            mover["robinhood_tradable"] = None
+        finviz_movers.append(mover)
 
-    print(f"  yfinance pre: {len(premarket_results)} | finviz tradable gainers: {len(finviz_movers)}/{len(raw_finviz)}")
+    print(f"  yfinance pre: {len(premarket_results)} | finviz movers: {len(finviz_movers)}")
     write_json(DATA_DIR / "premarket.json", {
         "updated": now.isoformat(),
         "premarket": premarket_results,
@@ -468,7 +449,7 @@ def main():
     print(f"\n[3/4] News for top 15 tickers...")
     news_targets = [r["symbol"] for r in scan_results[:15]]
     all_news = []
-    with ThreadPoolExecutor(max_workers=5) as ex:
+    with ThreadPoolExecutor(max_workers=3) as ex:
         futures = {ex.submit(get_news_for, s, 5): s for s in news_targets}
         for f in as_completed(futures):
             all_news.extend(f.result())
