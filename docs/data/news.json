@@ -1,7 +1,43 @@
 {
-  "updated": "2026-05-27T19:19:00.672718+00:00",
+  "updated": "2026-05-27T21:03:40.615845+00:00",
   "count": 75,
   "items": [
+    {
+      "symbol": "PLUG",
+      "title": "Plug Power Is Up 6% but FuelCell Energy and Bloom Energy Are in the Red. What\u2019s Going On With Fuel Cell Stocks?",
+      "url": "https://247wallst.com/investing/2026/05/27/plug-power-is-up-6-but-fuelcell-energy-and-bloom-energy-are-in-the-red-whats-going-on-with-fuel-cell-stocks/",
+      "source": "24/7 Wall St.",
+      "published": "2026-05-27T19:27:40Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "NIO",
+      "title": "NIO CEO William Li Discusses \u2018Major Milestone\u2019 of First-Ever Quarterly Profit",
+      "url": "https://finance.yahoo.com/video/nio-ceo-william-li-discusses-191021675.html",
+      "source": "NYSE",
+      "published": "2026-05-27T19:10:21Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "NIO",
+      "title": "NIO Is Up 9% Today: Is It Outperforming Other EV Stocks Like Tesla and Rivian?",
+      "url": "https://247wallst.com/investing/2026/05/27/nio-is-up-9-today-is-it-outperforming-other-ev-stocks-like-tesla-and-rivian/",
+      "source": "24/7 Wall St.",
+      "published": "2026-05-27T18:36:20Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "NIO",
+      "title": "Does a Lower-Priced SUV and Improved Chip Production Make Nio Stock a Buy in 2026?",
+      "url": "https://www.fool.com/investing/2026/05/27/does-a-lower-priced-suv-and-improved-chip-producti/",
+      "source": "Motley Fool",
+      "published": "2026-05-27T18:00:00Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
     {
       "symbol": "BB",
       "title": "BlackBerry\u2019s QNX Research Highlights Software Bottleneck in Physical AI Robotics Growth (BB)",
@@ -12,11 +48,29 @@
       "matched_keywords": []
     },
     {
+      "symbol": "NIO",
+      "title": "NIO Stock Rises Premarket: EV Maker Pulls In NBA Icon Yao Ming Ahead Of New ES9 SUV Launch",
+      "url": "https://stocktwits.com/news-articles/markets/equity/nio-stock-premarket-yao-ming-es9-suv-launch/cZgg2D7ReAm",
+      "source": "Stocktwits",
+      "published": "2026-05-27T08:42:04Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
       "symbol": "BB",
       "title": "NOK, MU, BB Stocks Hit 52-Week Highs Today: What's Fueling The Rally?",
       "url": "https://stocktwits.com/news-articles/markets/equity/nok-mu-bb-stocks-hit-52-week-highs-today-what-is-fueling-the-rally/cZgXwdPReA5",
       "source": "Stocktwits",
       "published": "2026-05-27T03:13:10Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "NIO",
+      "title": "Ferrari reverses after controversial EV announcement",
+      "url": "https://www.thestreet.com/automotive/ferrari-reverses-after-controversial-ev-announcement",
+      "source": "TheStreet",
+      "published": "2026-05-26T18:47:00Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
@@ -57,29 +111,11 @@
       "matched_keywords": []
     },
     {
-      "symbol": "AMC",
-      "title": "Markets Are Focused on Iran War. Peace Won\u2019t Fix the Inflation Problem.",
-      "url": "https://www.barrons.com/articles/stock-market-iran-war-inflation-things-to-know-today-5ac0d65e?siteid=yhoof2&yptr=yahoo",
-      "source": "Barrons.com",
-      "published": "2026-05-26T10:41:00Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
       "symbol": "BB",
       "title": "BB, NOK Stocks Double This Year \u2014 What\u2019s Driving BlackBerry, Nokia's Surprise Comeback Trade?",
       "url": "https://stocktwits.com/news-articles/markets/equity/bb-nok-stocks-double-this-year-black-berry-nokia-surprise-comeback-trade/cZgavRnRepk",
       "source": "Stocktwits",
       "published": "2026-05-26T07:38:15Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
-      "symbol": "AMC",
-      "title": "Disney\u2019s \u2018Mandalorian and Grogu\u2019 Conquers Memorial Day Weekend Box Office",
-      "url": "https://www.barrons.com/articles/disney-mandalorian-grogu-star-wars-box-office-7dac1411?siteid=yhoof2&yptr=yahoo",
-      "source": "Barrons.com",
-      "published": "2026-05-25T21:22:00Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
@@ -100,17 +136,6 @@
       "published": "2026-05-25T12:10:44Z",
       "sentiment": "neutral",
       "matched_keywords": []
-    },
-    {
-      "symbol": "AMC",
-      "title": "CEO Insider Buying And Menu Expansion Shape AMC Investment Story",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/ceo-insider-buying-menu-expansion-211450336.html",
-      "source": "Simply Wall St.",
-      "published": "2026-05-24T21:14:50Z",
-      "sentiment": "bullish",
-      "matched_keywords": [
-        "insider buying"
-      ]
     },
     {
       "symbol": "PLUG",
@@ -140,29 +165,11 @@
       "matched_keywords": []
     },
     {
-      "symbol": "PLUG",
-      "title": "Here\u2019s Why Plug Power Inc. (PLUG) Is Among the Most Traded US Stocks",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-plug-power-inc-plug-145152867.html",
-      "source": "Insider Monkey",
-      "published": "2026-05-23T14:51:52Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
       "symbol": "HIVE",
       "title": "MarketBeat Week in Review \u2013 05/18 - 05/22",
       "url": "https://www.marketbeat.com/originals/marketbeat-week-in-review-05-18-05-22/?utm_source=yahoofinance&utm_medium=yahoofinance",
       "source": "MarketBeat",
       "published": "2026-05-23T11:00:00Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
-      "symbol": "AMC",
-      "title": "3 of Wall Street\u2019s Favorite Stocks That Fall Short",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/3-wall-street-favorite-stocks-101255786.html",
-      "source": "StockStory",
-      "published": "2026-05-23T10:12:55Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
@@ -203,7 +210,7 @@
       "matched_keywords": []
     },
     {
-      "symbol": "ACB",
+      "symbol": "SNDL",
       "title": "Should You Buy CGC Stock After Marijuana Reclassification?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/buy-cgc-stock-marijuana-reclassification-121900234.html",
       "source": "Zacks",
@@ -212,7 +219,7 @@
       "matched_keywords": []
     },
     {
-      "symbol": "SNDL",
+      "symbol": "ACB",
       "title": "Should You Buy CGC Stock After Marijuana Reclassification?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/buy-cgc-stock-marijuana-reclassification-121900234.html",
       "source": "Zacks",
@@ -262,15 +269,6 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-bit-digital-130004992.html",
       "source": "Zacks",
       "published": "2026-05-21T13:00:04Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
-      "symbol": "AMC",
-      "title": "Company News for May 21, 2026",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/company-news-may-21-2026-104500420.html",
-      "source": "Zacks",
-      "published": "2026-05-21T10:45:00Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
@@ -560,15 +558,6 @@
       ]
     },
     {
-      "symbol": "ACB",
-      "title": "Should SNDL Stock Be in Your Portfolio Post Q1 Earnings?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/sndl-stock-portfolio-post-q1-123800896.html",
-      "source": "Zacks",
-      "published": "2026-05-06T12:38:00Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
       "symbol": "SNDL",
       "title": "Should SNDL Stock Be in Your Portfolio Post Q1 Earnings?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/sndl-stock-portfolio-post-q1-123800896.html",
@@ -579,6 +568,15 @@
     },
     {
       "symbol": "ACB",
+      "title": "Should SNDL Stock Be in Your Portfolio Post Q1 Earnings?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sndl-stock-portfolio-post-q1-123800896.html",
+      "source": "Zacks",
+      "published": "2026-05-06T12:38:00Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "SNDL",
       "title": "Weekly Roundup on the Cannabis Sector & Psychedelic Sector",
       "url": "https://finance.yahoo.com/sectors/healthcare/articles/weekly-roundup-cannabis-sector-psychedelic-151124959.html",
       "source": "Market Exclusive",
@@ -587,7 +585,7 @@
       "matched_keywords": []
     },
     {
-      "symbol": "SNDL",
+      "symbol": "ACB",
       "title": "Weekly Roundup on the Cannabis Sector & Psychedelic Sector",
       "url": "https://finance.yahoo.com/sectors/healthcare/articles/weekly-roundup-cannabis-sector-psychedelic-151124959.html",
       "source": "Market Exclusive",
