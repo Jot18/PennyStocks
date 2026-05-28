@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T21:58:49.069726+00:00",
+  "updated": "2026-05-28T23:26:29.923953+00:00",
   "count": 23,
   "filters": {
     "max_price": 10.0,
@@ -55,30 +55,6 @@
       ]
     },
     {
-      "symbol": "BITF",
-      "exchange": "RH",
-      "robinhood_tradable": true,
-      "price": 5.505,
-      "prev_close": 5.13,
-      "day_change_pct": 7.31,
-      "gap_pct": 0.78,
-      "volume": 52075794,
-      "volume_source": "today",
-      "today_vol": 52075794,
-      "avg_vol_20": 37465321,
-      "rel_volume": 1.39,
-      "rsi": 73.0,
-      "atr_pct": 10.71,
-      "ma5": 4.863,
-      "ma20": 4.0983,
-      "score": 40,
-      "signals": [
-        "Overbought",
-        "Uptrend",
-        "Volatile 10.7%"
-      ]
-    },
-    {
       "symbol": "PLUG",
       "exchange": "RH",
       "robinhood_tradable": true,
@@ -124,6 +100,30 @@
         "Overbought",
         "Uptrend",
         "Volatile 10.8%"
+      ]
+    },
+    {
+      "symbol": "BITF",
+      "exchange": "RH",
+      "robinhood_tradable": true,
+      "price": 5.615,
+      "prev_close": 5.505,
+      "day_change_pct": 2.0,
+      "gap_pct": -2.36,
+      "volume": 32195536,
+      "volume_source": "today",
+      "today_vol": 32195536,
+      "avg_vol_20": 38025158,
+      "rel_volume": 0.85,
+      "rsi": 76.7,
+      "atr_pct": 10.64,
+      "ma5": 5.14,
+      "ma20": 4.242,
+      "score": 30,
+      "signals": [
+        "Overbought",
+        "Uptrend",
+        "Volatile 10.6%"
       ]
     },
     {
@@ -454,26 +454,6 @@
       "signals": []
     },
     {
-      "symbol": "NIO",
-      "exchange": "RH",
-      "robinhood_tradable": true,
-      "price": 5.55,
-      "prev_close": 5.75,
-      "day_change_pct": -3.48,
-      "gap_pct": -1.91,
-      "volume": 38083157,
-      "volume_source": "today",
-      "today_vol": 38083157,
-      "avg_vol_20": 42316677,
-      "rel_volume": 0.9,
-      "rsi": 44.3,
-      "atr_pct": 4.64,
-      "ma5": 5.472,
-      "ma20": 5.875,
-      "score": 0,
-      "signals": []
-    },
-    {
       "symbol": "LCID",
       "exchange": "RH",
       "robinhood_tradable": true,
@@ -490,6 +470,26 @@
       "atr_pct": 6.13,
       "ma5": 6.074,
       "ma20": 6.128,
+      "score": 0,
+      "signals": []
+    },
+    {
+      "symbol": "NIO",
+      "exchange": "RH",
+      "robinhood_tradable": true,
+      "price": 5.55,
+      "prev_close": 5.75,
+      "day_change_pct": -3.48,
+      "gap_pct": -1.91,
+      "volume": 38083157,
+      "volume_source": "today",
+      "today_vol": 38083157,
+      "avg_vol_20": 42316677,
+      "rel_volume": 0.9,
+      "rsi": 44.3,
+      "atr_pct": 4.64,
+      "ma5": 5.472,
+      "ma20": 5.875,
       "score": 0,
       "signals": []
     },
