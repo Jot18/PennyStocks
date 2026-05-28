@@ -1,36 +1,11 @@
 {
-  "updated": "2026-05-27T22:57:45.006709+00:00",
+  "updated": "2026-05-28T00:07:56.485624+00:00",
   "count": 24,
   "filters": {
     "max_price": 10.0,
     "min_volume": 100000
   },
   "results": [
-    {
-      "symbol": "BITF",
-      "exchange": "RH",
-      "robinhood_tradable": true,
-      "price": 5.13,
-      "prev_close": 4.81,
-      "day_change_pct": 6.65,
-      "gap_pct": 6.03,
-      "volume": 45308536,
-      "volume_source": "today",
-      "today_vol": 45308536,
-      "avg_vol_20": 36004101,
-      "rel_volume": 1.26,
-      "rsi": 74.8,
-      "atr_pct": 10.89,
-      "ma5": 4.604,
-      "ma20": 3.9675,
-      "score": 45,
-      "signals": [
-        "Gap +6.0%",
-        "Overbought",
-        "Uptrend",
-        "Volatile 10.9%"
-      ]
-    },
     {
       "symbol": "HIVE",
       "exchange": "RH",
@@ -53,6 +28,30 @@
         "Overbought",
         "Uptrend",
         "Volatile 10.8%"
+      ]
+    },
+    {
+      "symbol": "BITF",
+      "exchange": "RH",
+      "robinhood_tradable": true,
+      "price": 5.505,
+      "prev_close": 5.13,
+      "day_change_pct": 7.31,
+      "gap_pct": 0.78,
+      "volume": 52075794,
+      "volume_source": "today",
+      "today_vol": 52075794,
+      "avg_vol_20": 37403844,
+      "rel_volume": 1.39,
+      "rsi": 73.0,
+      "atr_pct": 10.71,
+      "ma5": 4.863,
+      "ma20": 4.0983,
+      "score": 40,
+      "signals": [
+        "Overbought",
+        "Uptrend",
+        "Volatile 10.7%"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T22:57:45.006709+00:00",
+  "updated": "2026-05-28T00:07:56.485624+00:00",
   "count": 75,
   "items": [
     {
@@ -8,6 +8,15 @@
       "url": "https://www.fool.com/coverage/stock-market-today/2026/05/27/stock-market-today-may-27-nio-jumps-after-es9-suv-launches-at-lower-than-expected-price/",
       "source": "Motley Fool",
       "published": "2026-05-27T21:55:20Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "BB",
+      "title": "BlackBerry (BB) Beats Stock Market Upswing: What Investors Need to Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/blackberry-bb-beats-stock-market-214504707.html",
+      "source": "Zacks",
+      "published": "2026-05-27T21:45:04Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
@@ -107,15 +116,6 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/ceva-inc-ceva-outperforming-other-134003057.html",
       "source": "Zacks",
       "published": "2026-05-26T13:40:03Z",
-      "sentiment": "neutral",
-      "matched_keywords": []
-    },
-    {
-      "symbol": "BB",
-      "title": "BB, NOK Stocks Double This Year \u2014 What\u2019s Driving BlackBerry, Nokia's Surprise Comeback Trade?",
-      "url": "https://stocktwits.com/news-articles/markets/equity/bb-nok-stocks-double-this-year-black-berry-nokia-surprise-comeback-trade/cZgavRnRepk",
-      "source": "Stocktwits",
-      "published": "2026-05-26T07:38:15Z",
       "sentiment": "neutral",
       "matched_keywords": []
     },
