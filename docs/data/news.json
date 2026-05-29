@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T21:23:31.058967+00:00",
+  "updated": "2026-05-29T22:52:10.044743+00:00",
   "count": 75,
   "items": [
     {
@@ -186,6 +186,15 @@
     },
     {
       "symbol": "AMC",
+      "title": "AMC Theatres and ODEON Cinemas Welcome More Than 5 Million Moviegoers Globally Over Memorial Day Weekend - AMC Records Its Best Thursday-Through-Monday U.S. Attendance in 2026",
+      "url": "https://www.businesswire.com/news/home/20260525513141/en",
+      "source": "Finviz",
+      "published": "2026-05-26T08:00:00Z",
+      "sentiment": "neutral",
+      "matched_keywords": []
+    },
+    {
+      "symbol": "AMC",
       "title": "Disney\u2019s \u2018Mandalorian and Grogu\u2019 Conquers Memorial Day Weekend Box Office",
       "url": "https://www.barrons.com/articles/disney-mandalorian-grogu-star-wars-box-office-7dac1411?siteid=yhoof2&yptr=yahoo",
       "source": "Barrons.com",
@@ -210,17 +219,6 @@
       "published": "2026-05-25T12:10:44Z",
       "sentiment": "neutral",
       "matched_keywords": []
-    },
-    {
-      "symbol": "AMC",
-      "title": "CEO Insider Buying And Menu Expansion Shape AMC Investment Story",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/ceo-insider-buying-menu-expansion-211450336.html",
-      "source": "Simply Wall St.",
-      "published": "2026-05-24T21:14:50Z",
-      "sentiment": "bullish",
-      "matched_keywords": [
-        "insider buying"
-      ]
     },
     {
       "symbol": "PLUG",
